@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem vindo</h1>
+    <p> Sistema de emprestimo de jogos </p>
+</div>
+
+<div style="text-align: center;">
+    <div style="display: inline-block;" class="card">
+        <div class="card-body">
+            <h5 class="card-title">Jogos cadastrados</h5>
+            <p class="card-text">@ViewBag.JogosCadastrados</p>
+            <a href="/Jogo/Index" class="btn btn-primary">Ver</a>
+        </div>
+    </div>
+
+    <div style="display: inline-block;" class="card">
+        <div class="card-body">
+            <h5 class="card-title">Jogos Emprestados</h5>
+            <p class="card-text">@ViewBag.JogosEmprestados</p>
+            <a href="/JogoEmprestado/Index" class="btn btn-primary">Ver</a>
+        </div>
+    </div>
+
+    <div style="display: inline-block;" class="card">
+        <div class="card-body">
+            <h5 class="card-title">Amigos cadastrados</h5>
+            <p class="card-text">@ViewBag.AmigosCadastrados</p>
+            <a href="/Amigo/Index" class="btn btn-primary">Ver</a>
+        </div>
+    </div>
+</div>

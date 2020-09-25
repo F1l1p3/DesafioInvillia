@@ -1,0 +1,11 @@
+@model Amigo
+<h1>Alterar Dados De Amigo</h1>
+
+<form action="Edit" method="POST" style="margin-top: 100px;">
+  <div class="form-group">
+    <input type="hidden" id="Id" name="Id" value="@Model.Id"/>
+    <label for="Nome">Amigo</label>
+    <input type="text" class="form-control" id="Nome" name="Nome" value="@Model.Nome" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Alterar</button> | <a href="/Amigo/Index" class="btn btn-dark">Voltar</a>
+</form>

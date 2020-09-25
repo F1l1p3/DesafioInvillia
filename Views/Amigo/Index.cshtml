@@ -1,0 +1,27 @@
+@model IEnumerable<Amigo>
+<h1>Lista de Amigos</h1>
+
+<a href="/Amigo/Save" class="btn btn-primary">Adicionar Amigo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th> - </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        { 
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Nome</th>
+            <th>
+                <a class="btn btn-warning" href="/Amigo/Edit/@item.Id">Edit</a> |
+                <a class="btn btn-danger" href="/Amigo/Deleta/@item.Id">Delete</a>
+            </th>
+        </tr>
+        }
+    </tbody>
+</table>

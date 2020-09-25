@@ -1,0 +1,27 @@
+@model IEnumerable<Jogo>
+<h1>Lista de Jogos</h1>
+
+<a href="/Jogo/Save" class="btn btn-primary">Adicionar Jogo</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th> - </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        { 
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.NomeJogo</th>
+            <th>
+                <a class="btn btn-warning" href="/Jogo/Edit/@item.Id">Edit</a> |
+                <a class="btn btn-danger" href="/Jogo/Delete/@item.Id">Delete</a>
+            </th>
+        </tr>
+        }
+    </tbody>
+</table>
